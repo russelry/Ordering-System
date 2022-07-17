@@ -1,0 +1,242 @@
+[
+    {
+        "comboType": "meat",
+        "name": "Dream Special",
+        "ingredients": ["Italian", "Sausage", "American Bacon", "Mushroom", "Black Olive", "Tomato"],
+        "cost": {
+            "mini": 16.25,
+            "medium": 28.00,
+            "large": 34.50
+        }
+    },
+    {
+        "comboType": "meat",
+        "name": "Corvegas",
+        "ingredients": ["Pepperoni", "Fresh Mozzarella", "Roasted Red Pepper", "Artichoke Hearts", "Pesto(as a topping)"],
+        "cost": {
+            "mini": 16.25,
+            "medium": 28.00,
+            "large": 34.50
+        }
+    },
+    {
+        "comboType": "meat",
+        "name": "Omaha or Bust",
+        "ingredients": ["BBQ Sauce", "Pulled Pork", "Red Onion", "Pineapple", "Fresh Cilantro"],
+        "cost": {
+            "mini": 16.25,
+            "medium": 28.00,
+            "large": 34.50
+        }
+    },
+    {
+        "comboType": "meat",
+        "name": "Zorba",
+        "ingredients": ["Herb Chicken", "Feta", "Mushroom", "Artichoke Heart", "Red Onion"],
+        "cost": {
+            "mini": 16.25,
+            "medium": 28.00,
+            "large": 34.50
+        }
+    },
+    {
+        "comboType": "meat",
+        "name": "Spartan v. Raider",
+        "ingredients": ["BBQ Pulled Pork", "Pineapple"],
+        "cost": {
+            "mini": 12.50,
+            "medium": 22.00,
+            "large": 27.00
+        }
+    },
+    {
+        "comboType": "meat",
+        "name": "Marilyn Monroe",
+        "ingredients": ["Pepperoni", "American Bacon", "Green Pepper", "Fresh Tomato"],
+        "cost": {
+            "mini": 15.00,
+            "medium": 26.00,
+            "large": 32.00
+        }
+    },
+    {
+        "comboType": "meat",
+        "name": "Hoodoo You Love",
+        "ingredients": ["Jerk Chicken", "Roasted Potatoes", "Carmelized Onions", "Pineapple"],
+        "cost": {
+            "mini": 15.00,
+            "medium": 26.00,
+            "large": 32.00
+        }
+    },
+    {
+        "comboType": "meat",
+        "name": "Rat Pack Special",
+        "ingredients": ["Pepperoni", "Extra Cheese", "Ground Beef", "Mushroom", "Black Olive"],
+        "cost": {
+            "mini": 16.25,
+            "medium": 28.00,
+            "large": 34.50
+        }
+    },
+    {
+        "comboType": "meat",
+        "name": "Tejano",
+        "ingredients": ["BBQ Sauce", "Herb Chicken", "Smoked Gouda", "Red Onion", "Cilantro" ],
+        "cost": {
+            "mini": 16.25,
+            "medium": 28.00,
+            "large": 34.50
+        }
+    },
+    {
+        "comboType": "meat",
+        "name": "Dimple Hill",
+        "ingredients": ["Turkey Sausage", "Bacon", "Mushroom", "Green Pepper", "Red Onion"],
+        "cost": {
+            "mini": 16.25,
+            "medium": 28.00,
+            "large": 34.50
+        }
+    },
+    {
+        "comboType": "meat",
+        "name": "Dog Running",
+        "ingredients": ["Canadian Bacon", "Sun-Dried Tomato", "Gouda", "Mushroom", "Artichoke"],
+        "cost": {
+            "mini": 16.25,
+            "medium": 28.00,
+            "large": 34.50
+        }
+    },
+    {
+        "comboType": "meat",
+        "name": "Mary's Peak",
+        "ingredients": ["Pesto Sauce", "Herb Chicken", "Roasted Red Pepper", "Feta", "Black Olive"],
+        "cost": {
+            "mini": 16.25,
+            "medium": 28.00,
+            "large": 34.50
+        }
+    },
+    {
+        "comboType": "meat",
+        "name": "The Bent",
+        "ingredients": ["Pepperoni", "Extra Cheese", "American Bacon", "Italian Sausage", "Mushroom", "Black Olive"],
+        "cost": {
+            "mini": 17.50,
+            "medium": 30.00,
+            "large": 37.00
+        }
+    },
+    {
+        "comboType": "meat",
+        "name": "Bob Marley",
+        "ingredients": ["Jerk Chicken", "Mushroom", "Red Onion", "Black Olive"],
+        "cost": {
+            "mini": 15.00,
+            "medium": 26.00,
+            "large": 32.00
+        }
+    },
+    {
+        "comboType": "veggie",
+        "name": "Vegan Love",
+        "ingredients": ["GF Crust", "Herbed Olive Oil", "Vegan Mozzarella", "Roasted Garlic", "Sun-Dried Tomato", "Kalamata Olive", "Fresh Arugula"],
+        "cost": {
+            "mini": 16.50,
+            "medium": 28.00,
+            "large": 34.50
+        }
+    },
+    {
+        "comboType": "veggie",
+        "name": "Edward Abbey",
+        "ingredients": ["Pesto Sauce", "Sun-Dried Tomato", "Feta", "Artichoke Heart"],
+        "cost": {
+            "mini": 15.00,
+            "medium": 26.00,
+            "large": 32.00
+        }
+    },
+    {
+        "comboType": "veggie",
+        "name": "Caro Amico",
+        "ingredients": ["Fresh Mozzarella", "Fresh Tomato", "Fresh Basil"],
+        "cost": {
+            "mini": 13.75,
+            "medium": 24.00,
+            "large": 29.50
+        }
+    },
+    {
+        "comboType": "veggie",
+        "name": "Eclipse",
+        "ingredients": ["Feta", "Artichoke Heart", "Roasted Red Pepper", "Kalamata Olive"],
+        "cost": {
+            "mini": 15.00,
+            "medium": 26.00,
+            "large": 32.00
+        }
+    },
+    {
+        "comboType": "veggie",
+        "name": "Benny's Delight",
+        "ingredients": ["Roasted Potatoes", "Smoked Gouda", "Carmelized Onions", "Artichoke"],
+        "cost": {
+            "mini": 15.00,
+            "medium": 26.00,
+            "large": 32.00
+        }
+    },
+    {
+        "comboType": "veggie",
+        "name": "Bill Walton",
+        "ingredients": ["Mushroom", "Black Olive", "Green Pepper", "Red Onion", "Zucchini", "Fresh Tomato"],
+        "cost": {
+            "mini": 16.25,
+            "medium": 28.00,
+            "large": 34.50
+        }
+    },
+    {
+        "comboType": "veggie",
+        "name": "Margharita",
+        "ingredients": ["Herbed Olive Oil", "Cooked Fresh Tomato", "Fresh Garlic", "Fresh Basil"],
+        "cost": {
+            "mini": 13.75,
+            "medium": 24.00,
+            "large": 29.50
+        }
+    },
+    {
+        "comboType": "veggie",
+        "name": "Rocket Science",
+        "ingredients": ["Pesto Sauce", "Feta", "Roasted Red Pepper", "Kalamata Olive", "topped with Fresh Arugula", "Shaved Parmesan"],
+        "cost": {
+            "mini": 16.25,
+            "medium": 28.00,
+            "large": 34.50
+        }
+    },
+    {
+        "comboType": "veggie",
+        "name": "Bike-E",
+        "ingredients": ["Herbed Olive Oil", "Asiago", "Artichoke", "Kalamata", "Tomato", "Basil"],
+        "cost": {
+            "mini": 16.25,
+            "medium": 28.00,
+            "large": 34.50
+        }
+    },
+    {
+        "comboType": "veggie",
+        "name": "Herbivore",
+        "ingredients": ["Feta", "Fresh Garlic", "Black Olive", "Pepperoncini", "Red Onion"],
+        "cost": {
+            "mini": 16.25,
+            "medium": 28.00,
+            "large": 34.50
+        }
+    }
+]
