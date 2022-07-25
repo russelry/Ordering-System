@@ -46,6 +46,7 @@ router.patch('/:id', async function (req, res, next) {
         res.status(404).send({
             error: "Specified pizzaId not found."
         })
+        return;
     }
     if (validateAgainstSchema(body, pizzaSchema)) {
         const updateSuccessful = await updatePizzaById(body, id)
@@ -70,6 +71,7 @@ router.delete('/:id', async function (req, res, next) {
         res.status(404).send({
             error: "Specified pizzaId not found."
         })
+        return;
     }
     const count = await deletePizzaById(id)
     if(count) {

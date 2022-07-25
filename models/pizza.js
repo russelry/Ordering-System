@@ -45,8 +45,6 @@ exports.updatePizzaById = async function updatePizzaById(pizza, id) {
         ingredients: pizza.ingredients,
         cost: pizza.cost
     }
-    console.log("PIZZA VALUE")
-    console.log(pizzaValues)
     const db = getDbInstance()
     const collection = db.collection("pizzas")
     try {
