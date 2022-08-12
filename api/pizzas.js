@@ -83,12 +83,12 @@ router.delete('/:id', async function (req, res, next) {
     }
 })
 
-router.get('/', async function (req, res, next) {
-    const topping = req.query.topping
-    const pizzas = await getAllPizzas()
-    const pizzasByToppings = await getPizzasByTopping(topping, pizzas)
-    res.send(pizzasByToppings)
+//router.get('/', async function (req, res, next) {
+//    const topping = req.query.topping
+//    const pizzas = await getAllPizzas()
+//    const pizzasByToppings = await getPizzasByTopping(topping, pizzas)
+//    res.send(pizzasByToppings)
     
-})
+//})
 
 module.exports = router
