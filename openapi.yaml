@@ -1,0 +1,388 @@
+openapi: 3.0.3
+info:
+  version: 1.0.0
+  title: Data Data Data
+  description: This API can be used by users to get campsite data from our database.
+paths:
+  '/pizzas':
+    get:
+      summary: Fetch a list of pizzas
+      description: |
+        Returns a list of pizzas.
+      operationId: getPizzas
+      tags:
+        - pizzas
+      responses:
+        '200':
+          description: Success
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  type: object
+                  properties:
+                    _id:
+                      type: string
+                      description: ID from the database
+                      example: 62defcfa8d9b5862f4c52470
+                    comboType:
+                      type: string
+                      description: Either meat or veggie
+                      example: meat
+                    name:
+                      type: string
+                      description: Name of pizza
+                      example: Dream Special
+                    ingredients:
+                      type: array
+                      uniqueItems: true
+                      items:
+                        type: string
+                        example: Sausage
+                    cost: 
+                        type: object
+                        properties:
+                          mini:
+                            type: integer
+                            example: 16.25
+                          medium:
+                            type: integer
+                            example: 28
+                          large:
+                            type: integer
+                            example: 34.5
+
+  '/pizzas/{id1}':
+    parameters:
+      - name: id1
+        in: path
+        description: >
+          Unique ID of a Course.  Exact type/format will depend on your implementation but will likely be either an integer or a string.
+        schema:
+          oneOf:
+            - type: integer
+            - type: string
+        example: "123"
+        required: true
+    post:
+      summary: Add a pizza to the menu.
+      description: |
+        Adds a pizza to the menu.
+      operationId: postPizza
+      tags:
+        - pizzas
+      requestBody:
+        required: true
+        description: >
+          All the imformation for a pizza
+        content:
+          application/json:
+            schema:
+              type: object
+              example:
+                comboType: test
+                name: Test Name
+                ingredients: ["test1", "test2", "test3"]
+                cost: {
+                  mini: 16.25,
+                  meduim: 28.00,
+                  large: 34.50
+                }
+      responses:
+        '201':
+          description: Success
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  id:
+                    type: string
+                    example: 62f2971e1c894d4403ec1bcc
+  '/pizzas/{id2}':
+    parameters:
+      - name: id2
+        in: path
+        description: >
+          Unique ID of a Course.  Exact type/format will depend on your implementation but will likely be either an integer or a string.
+        schema:
+          oneOf:
+            - type: integer
+            - type: string
+        example: "123"
+        required: true
+    get:
+      summary: Fetch a single pizza
+      description: |
+        Returns a pizzas.
+      operationId: getPizzaById
+      tags:
+        - pizzas
+      responses:
+        '200':
+          description: Success
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  type: object
+                  properties:
+                    _id:
+                      type: string
+                      description: ID from the database
+                      example: 62defcfa8d9b5862f4c52470
+                    comboType:
+                      type: string
+                      description: Either meat or veggie
+                      example: meat
+                    name:
+                      type: string
+                      description: Name of pizza
+                      example: Dream Special
+                    ingredients:
+                      type: array
+                      uniqueItems: true
+                      items:
+                        type: string
+                        example: Sausage
+                    cost: 
+                        type: object
+                        properties:
+                          mini:
+                            type: integer
+                            example: 16.25
+                          medium:
+                            type: integer
+                            example: 28
+                          large:
+                            type: integer
+                            example: 34.5
+  '/pizzas/{id3}':
+    parameters:
+      - name: id3
+        in: path
+        description: >
+          Unique ID of a Course.  Exact type/format will depend on your implementation but will likely be either an integer or a string.
+        schema:
+          oneOf:
+            - type: integer
+            - type: string
+        example: "123"
+        required: true
+    patch:
+      summary: Update a pizza.
+      description: >
+        Updates a pizza from the menu
+      operationId: patchPizza
+      tags:
+        - pizzas
+      responses:
+        '200':
+          description: Pizza updated successfully
+          
+  '/pizzas/{id4}':
+    parameters:
+      - name: id4
+        in: path
+        description: >
+          Unique ID of a Course.  Exact type/format will depend on your implementation but will likely be either an integer or a string.
+        schema:
+          oneOf:
+            - type: integer
+            - type: string
+        example: "123"
+        required: true
+    delete:
+      summary: Delete a pizza.
+      description: >
+        Deletes a pizza from the menu
+      operationId: deletePizza
+      tags:
+        - pizzas
+      responses:
+        '200':
+          description: Pizza deleted successfully
+          
+  '/orders/{id1}':
+    parameters:
+      - name: id1
+        in: path
+        description: >
+          Unique ID of a Course.  Exact type/format will depend on your implementation but will likely be either an integer or a string.
+        schema:
+          oneOf:
+            - type: integer
+            - type: string
+        example: "123"
+        required: true
+    post:
+      summary: Adds an empty order to the database
+      description: |
+        Adds a pizza to the menu.
+      operationId: postOrder
+      tags:
+        - orders
+      requestBody:
+        required: true
+        description: >
+          Adds an empty order to the database
+        content:
+          application/json:
+            schema:
+              type: object
+              example:
+                customerDetails: {
+                  name: "",
+                  phoneNum: "",
+                  address: ""
+                }
+                order: []
+      responses:
+        '201':
+          description: Success
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  id:
+                    type: string
+                    example: 62f2971e1c894d4403ec1bcc
+                    
+  '/orders':
+     get:
+      summary: Fetch a list of orders
+      description: |
+        Returns a list of orders.
+      operationId: getOrders
+      tags:
+        - orders
+      responses:
+        '200':
+          description: Success
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  type: object
+                  example:
+                    customerDetails: {
+                      name: "Jon",
+                      phoneNum: "123-456-7890",
+                      address: "123 Test ST"
+                    }
+                    order: ["pizza1", "pizza2", "pizza3"]
+  
+  '/orders/{id2}':
+    parameters:
+      - name: id2
+        in: path
+        description: >
+          Unique ID of a Course.  Exact type/format will depend on your implementation but will likely be either an integer or a string.
+        schema:
+          oneOf:
+            - type: integer
+            - type: string
+        example: "123"
+        required: true
+    get:
+      summary: Fetch a single order
+      description: |
+        Returns a list of orders.
+      operationId: getOrder
+      tags:
+        - orders
+      responses:
+        '200':
+          description: Success
+          content:
+            application/json:
+              schema:
+                  type: object
+                  example:
+                    customerDetails: {
+                      name: "Jon",
+                      phoneNum: "123-456-7890",
+                      address: "123 Test ST"
+                    }
+                    order: ["pizza1", "pizza2", "pizza3"]
+                    
+  '/orders/{id3}':
+    parameters:
+      - name: id3
+        in: path
+        description: >
+          Unique ID of a Course.  Exact type/format will depend on your implementation but will likely be either an integer or a string.
+        schema:
+          oneOf:
+            - type: integer
+            - type: string
+        example: "123"
+        required: true
+    patch:
+      summary: Adds customer details to order.
+      description: >
+        Updates a pizza from the menu
+      operationId: patchOrderDetails
+      tags:
+        - orders
+      responses:
+        '200':
+          description: Customer details added to order successfully
+
+  '/orders/{id4}':
+    parameters:
+      - name: id4
+        in: path
+        description: >
+          Unique ID of a Course.  Exact type/format will depend on your implementation but will likely be either an integer or a string.
+        schema:
+          oneOf:
+            - type: integer
+            - type: string
+        example: "123"
+        required: true
+    patch:
+      summary: Adds item to order.
+      description: >
+        Updates a pizza from the menu
+      operationId: patchOrderItems
+      tags:
+        - orders
+      responses:
+        '200':
+          description: Item added to order successfully
+          
+  '/orders/{id5}':
+    parameters:
+      - name: id5
+        in: path
+        description: >
+          Unique ID of a Course.  Exact type/format will depend on your implementation but will likely be either an integer or a string.
+        schema:
+          oneOf:
+            - type: integer
+            - type: string
+        example: "123"
+        required: true
+    delete:
+      summary: Deletes an order.
+      description: >
+        Deletes an order
+      operationId: deleteOrder
+      tags:
+        - orders
+      responses:
+        '200':
+          description: Order deleted successfully
+
+tags:
+  - name: pizzas
+    description: >
+      API endpoints related to pizzas.
+  - name: orders
+    description: >
+      API endpoints related to creating orders.
