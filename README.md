@@ -7,4 +7,26 @@ In the future I would like the server to run in a docker container. I will be ad
 - You have to manually start up a docker database using MongoDB (This will change in the future)
 - Run the command "npm run server" (This will change)
 - The you can use go to localhost:{PORT_VALUE} and use the openapi.yaml script to view some documentation for how the API work
+
+To start a docker server, run this command: 
+docker run -d --name final-server            \
+  --network final-net                    \
+  -p "27017:27017"                        \
+  -e "MONGO_INITDB_ROOT_USERNAME=root"            \
+  -e "MONGO_INITDB_ROOT_PASSWORD=password"    \
+  mongo:latest
+
+Then run this command to launch into a mongo terminal:
+docker run --rm -it                \
+    --network final-net         \
+    mongo:latest                \
+    mongo --host final-server        \
+        --username root        \
+        --password password        \
+        --authenticationDatabase admin
+
+Once you are in MongoDB you need to create a database using this command "use ordering-database". You will have to configure the mongo.js file inside of the lib folder to match your mongo username, password, host, port, and database name. 
+
+
 ## Postman Collection
+I have uploaded a postman collection and you can import the .json file into Postman and test some of my enpoints if you would like. Keep in mind that the server and the docker containter with the database has to be running as well. 
